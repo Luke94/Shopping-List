@@ -1,0 +1,317 @@
+.app {
+  min-height: 100vh;
+  padding: 28px;
+  display: grid;
+  grid-template-columns: minmax(0, 1120px) 260px;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.app-shell {
+  width: 100%;
+}
+
+.screen {
+  width: 100%;
+  min-height: calc(100vh - 56px);
+  background: #f5f7fb;
+  border-radius: 24px;
+  padding: 18px;
+  position: relative;
+  box-shadow: 0 18px 42px rgba(34, 49, 63, 0.16);
+}
+
+.content-area {
+  background: #cfdaf0;
+  border-radius: 18px;
+  min-height: 600px;
+  padding: 18px;
+}
+
+/* Horní lišta: vlevo nastavení/user, přesný střed home, vpravo akce */
+.top-icons {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  width: 100%;
+  min-height: 64px;
+  gap: 12px;
+  padding: 12px 18px;
+}
+
+.top-icons-left,
+.top-icons-center,
+.top-icons-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.top-icons-left {
+  justify-content: flex-start;
+}
+
+.top-icons-center {
+  justify-content: center;
+}
+
+.top-icons-right {
+  justify-content: flex-end;
+}
+
+.icon-button {
+  flex: 0 0 auto;
+}
+
+.icon-button,
+.mini-icon-button,
+.tiny-button,
+.small-action-button,
+.action-button,
+.toggle-button {
+  border: 1px solid #4f6275;
+  background: #ffffff;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.icon-button {
+  min-width: 38px;
+  height: 38px;
+  padding: 0 9px;
+  font-size: 18px;
+}
+
+.mini-icon-button {
+  min-width: 32px;
+  height: 32px;
+}
+
+.active-icon {
+  outline: 2px solid #62e0ff;
+}
+
+.section-title-bar {
+  background: #29475e;
+  color: white;
+  border-radius: 12px;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 14px;
+  font-weight: 700;
+  margin-bottom: 14px;
+  text-align: center;
+}
+
+.back-bar {
+  width: 100%;
+  border: none;
+  cursor: pointer;
+}
+
+.helper-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  background: #e7eef9;
+  border-radius: 12px;
+  padding: 10px 12px;
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+
+.tiny-button {
+  padding: 6px 10px;
+  background: white;
+}
+
+.empty-message {
+  background: #edf2fb;
+  border-radius: 12px;
+  padding: 18px;
+  text-align: center;
+  grid-column: 1 / -1;
+}
+
+/* Tablet / menší PC */
+@media (max-width: 920px) {
+  .app {
+    grid-template-columns: 1fr;
+    padding: 16px;
+  }
+
+  .screen {
+    min-height: auto;
+    border-radius: 18px;
+    padding: 12px;
+  }
+
+  .content-area {
+    min-height: calc(100vh - 120px);
+    padding: 10px;
+    border-radius: 14px;
+  }
+
+  .top-icons {
+    gap: 6px;
+    padding: 10px;
+    margin-bottom: 8px;
+  }
+
+  .top-icons-left,
+  .top-icons-center,
+  .top-icons-right {
+    gap: 6px;
+  }
+
+  .icon-button {
+    min-width: 32px;
+    height: 32px;
+    padding: 0 7px;
+    font-size: 16px;
+  }
+
+  .section-title-bar {
+    min-height: 38px;
+    border-radius: 8px;
+    padding: 7px 10px;
+    margin-bottom: 10px;
+  }
+}
+
+/* Mobil */
+@media (max-width: 420px) {
+  .app {
+    padding: 8px;
+  }
+
+  .screen {
+    border-radius: 12px;
+    padding: 8px;
+  }
+
+  .content-area {
+    min-height: calc(100vh - 92px);
+    padding: 8px;
+  }
+
+  .helper-bar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+/* Ruční náhled PC v Santa's lil helperu */
+.app-shell.preview-desktop {
+  max-width: 1120px;
+}
+
+/* Ruční náhled mobilu v Santa's lil helperu */
+.app-shell.preview-mobile {
+  max-width: 430px;
+  margin: 0 auto;
+  justify-self: center;
+}
+
+.app-shell.preview-mobile .screen {
+  border-radius: 14px;
+  padding: 8px;
+  min-height: calc(100vh - 56px);
+}
+
+.app-shell.preview-mobile .content-area {
+  min-height: calc(100vh - 120px);
+  padding: 8px;
+  border-radius: 12px;
+}
+
+.app-shell.preview-mobile .top-icons {
+  gap: 6px;
+  padding: 10px;
+  margin-bottom: 8px;
+}
+
+.app-shell.preview-mobile .top-icons-left,
+.app-shell.preview-mobile .top-icons-center,
+.app-shell.preview-mobile .top-icons-right {
+  gap: 6px;
+}
+
+.app-shell.preview-mobile .icon-button {
+  min-width: 34px;
+  height: 34px;
+  padding: 0 7px;
+  font-size: 16px;
+}
+
+/* Archivace */
+.archive-toggle {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: auto;
+  min-width: 38px;
+  max-width: 148px;
+  overflow: hidden;
+  transition:
+    background 180ms ease,
+    border-color 180ms ease,
+    transform 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.archive-toggle .archive-icon {
+  display: inline-block;
+  transition: transform 220ms ease;
+}
+
+.archive-toggle .archive-label {
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.archive-toggle.is-open {
+  background: #dff6ff;
+  border-color: #1e9dcc;
+  box-shadow: 0 0 0 3px rgba(98, 224, 255, 0.22);
+}
+
+.archive-toggle.is-open .archive-icon {
+  transform: rotate(-9deg) translateY(-1px) scale(1.08);
+}
+
+.archive-toggle.is-open::after {
+  content: "";
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: #20b26b;
+  box-shadow: 0 0 0 3px rgba(32, 178, 107, 0.18);
+}
+
+.archive-toggle:active .archive-icon {
+  transform: scale(0.88) rotate(-12deg);
+}
+
+/* Na menších šířkách a v mobilním náhledu zůstane jen ikonka archivu */
+@media (max-width: 920px) {
+  .archive-toggle .archive-label {
+    display: none;
+  }
+}
+
+.app-shell.preview-mobile .archive-toggle .archive-label {
+  display: none;
+}

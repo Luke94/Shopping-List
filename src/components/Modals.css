@@ -1,0 +1,267 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 16, 24, 0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  z-index: 1000;
+}
+
+.custom-modal {
+  position: relative;
+  background: #f4f5f7;
+  border: 3px solid #31495b;
+  border-radius: 24px;
+  width: min(640px, 95vw);
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+}
+
+.compact-modal {
+  width: min(460px, 92vw);
+}
+
+.compact-modal-body {
+  padding: 28px 20px 18px;
+}
+
+.compact-modal-body.two-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.modal-close-x {
+  position: absolute;
+  top: 10px;
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  border: 2px solid #31495b;
+  background: white;
+  color: #31495b;
+  font-size: 24px;
+  line-height: 1;
+  z-index: 2;
+}
+
+.left-close {
+  left: 12px;
+}
+
+.single-input-box {
+  position: relative;
+  border: 3px solid #31495b;
+  border-radius: 22px;
+  background: white;
+  min-height: 82px;
+  display: flex;
+  align-items: center;
+  padding: 12px 18px;
+}
+
+.single-input-box input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 24px;
+  font-weight: 700;
+  color: #31495b;
+  padding-right: 34px;
+}
+
+.single-input-box.neutral {
+  border-color: #31495b;
+}
+
+.single-input-box.valid {
+  border-color: #13af21;
+}
+
+.single-input-box.valid input {
+  color: #13af21;
+}
+
+.single-input-box.invalid {
+  border-color: #d1361f;
+}
+
+.single-input-box.invalid input {
+  color: #d1361f;
+}
+
+.floating-label {
+  position: absolute;
+  top: -14px;
+  left: 18px;
+  background: #f4f5f7;
+  padding: 0 8px;
+  font-size: 22px;
+  font-weight: 700;
+  color: #31495b;
+}
+
+.small-label {
+  font-size: 18px;
+}
+
+.input-status-icon {
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 28px;
+  font-weight: 700;
+  opacity: 0.5;
+}
+
+.validation-text {
+  min-height: 28px;
+  padding: 8px 6px 0;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.compact-validation {
+  font-size: 18px;
+}
+
+.valid-text {
+  color: #13af21;
+}
+
+.invalid-text {
+  color: #d1361f;
+}
+
+.modal-bottom-one {
+  border-top: 3px solid #31495b;
+}
+
+.modal-main-action {
+  width: 100%;
+  min-height: 78px;
+  border: none;
+  background: #f4f5f7;
+  font-size: 30px;
+  font-weight: 700;
+  color: #31495b;
+}
+
+.compact-action {
+  min-height: 70px;
+  font-size: 26px;
+}
+
+.modal-main-action:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.confirm-modal {
+  width: min(460px, 92vw);
+}
+
+.compact-confirm-content {
+  padding: 44px 20px 26px;
+  text-align: center;
+}
+
+.confirm-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #32485b;
+  margin-bottom: 18px;
+}
+
+.confirm-message {
+  font-size: 22px;
+  font-weight: 700;
+  color: #32485b;
+  line-height: 1.25;
+}
+
+.confirm-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-top: 3px solid #31495b;
+}
+
+.confirm-half {
+  min-height: 70px;
+  background: #f4f5f7;
+  border: none;
+  font-size: 28px;
+  font-weight: 700;
+  color: #32485b;
+}
+
+.confirm-half + .confirm-half {
+  border-left: 3px solid #31495b;
+}
+
+.search-modal,
+.compact-search {
+  width: min(520px, 94vw);
+}
+
+.compact-search-top {
+  padding: 46px 20px 18px;
+}
+
+.search-input-wrapper {
+  position: relative;
+}
+
+.search-input-wrapper input {
+  width: 100%;
+  min-height: 76px;
+  border: 3px solid #31495b;
+  border-radius: 22px;
+  background: white;
+  font-size: 24px;
+  font-weight: 700;
+  color: #31495b;
+  padding: 16px 62px 16px 20px;
+}
+
+.search-icon {
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 28px;
+}
+
+.search-results {
+  border-top: 3px solid #31495b;
+}
+
+.search-result-row {
+  width: 100%;
+  min-height: 68px;
+  border: none;
+  border-bottom: 3px solid #31495b;
+  background: #f4f5f7;
+  font-size: 22px;
+  font-weight: 700;
+  color: #31495b;
+  padding: 8px 14px;
+}
+
+.search-result-row:last-child {
+  border-bottom: none;
+}
+
+.search-active {
+  background: #bde298;
+  color: #6b944d;
+}
+
+.search-submit-row {
+  background: #f4f5f7;
+  color: #31495b;
+}

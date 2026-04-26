@@ -1,0 +1,19 @@
+.member-card {
+  background: #7ea0f0;
+  border-radius: 6px;
+  min-height: 52px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 14px;
+  margin-bottom: 8px;
+}
+
+.owner-member-card {
+  background: #3d96e9;
+  color: #0f1113;
+}
+
+.member-name {
+  font-size: 16px;
+}

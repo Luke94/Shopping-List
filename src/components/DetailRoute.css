@@ -1,0 +1,326 @@
+.action-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.action-button {
+  min-height: 40px;
+  background: #dfe7f5;
+  color: #1f2a35;
+}
+
+.danger-mode { background: #f8d7d7; color: #8a1f1f; }
+
+.mini-form {
+  display: grid;
+  grid-template-columns: 1fr 90px auto;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.mini-form input,
+.dev-row select {
+  min-height: 38px;
+  border: 1px solid #7e91a6;
+  border-radius: 8px;
+  padding: 6px 10px;
+}
+
+.small-action-button {
+  min-height: 38px;
+  background: #dfe7f5;
+  padding: 0 10px;
+}
+
+.small-action-button.muted { background: #eceff4; }
+
+.items-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 10px;
+}
+
+.item-row {
+  display: grid;
+  grid-template-columns: 1fr auto auto auto;
+  align-items: center;
+  gap: 8px;
+  background: #f6f8fc;
+  border: 1px solid #75899e;
+  border-radius: 12px;
+  min-height: 44px;
+  padding: 8px 10px;
+}
+
+.done-item { background: #c9ecb9; }
+.delete-selected { outline: 2px solid #3fa8ff; background: #cfe5ff; }
+.item-name { font-weight: 700; }
+.item-count { min-width: 48px; text-align: center; }
+
+.bottom-filter {
+  margin-top: 16px;
+  background: #29475e;
+  color: white;
+  border-radius: 12px;
+  padding: 10px 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bottom-filter-text { font-size: 14px; font-weight: 700; }
+.toggle-button { min-width: 52px; min-height: 30px; background: #dfe7f5; }
+.toggle-on { background: #9fe0b0; }
+
+@media (max-width: 680px) {
+  .items-list { grid-template-columns: 1fr; gap: 6px; }
+  .item-row { border-radius: 8px; min-height: 38px; padding: 5px 8px; }
+  .action-row { gap: 8px; margin-bottom: 10px; }
+  .action-button { min-height: 36px; }
+}
+
+@media (max-width: 420px) {
+  .action-row { grid-template-columns: 1fr; }
+  .bottom-filter { align-items: flex-start; gap: 8px; flex-direction: column; }
+}
+
+.app-shell.preview-mobile .items-list {
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.app-shell.preview-mobile .action-row {
+  grid-template-columns: 1fr;
+}
+
+
+.detail-archive-state {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: -4px 0 12px;
+  padding: 9px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(41, 71, 94, 0.2);
+  background: #edf4ff;
+  color: #244257;
+  font-size: 14px;
+  font-weight: 700;
+  transition: background 180ms ease, border-color 180ms ease, transform 180ms ease;
+}
+
+.detail-archive-state.archived {
+  background: #dff6ff;
+  border-color: #1e9dcc;
+  box-shadow: 0 0 0 3px rgba(98, 224, 255, 0.18);
+}
+
+.detail-archive-state-icon {
+  display: inline-block;
+  transition: transform 220ms ease;
+}
+
+.detail-archive-state.archived .detail-archive-state-icon {
+  transform: rotate(-9deg) translateY(-1px) scale(1.08);
+}
+
+.detail-archive-toggle.is-open {
+  animation: archivePulse 280ms ease;
+}
+
+@keyframes archivePulse {
+  0% { transform: scale(1); }
+  45% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+
+@media (max-width: 520px) {
+  .detail-archive-state {
+    align-items: flex-start;
+    font-size: 12px;
+    padding: 8px 10px;
+    margin-bottom: 10px;
+  }
+}
+
+.app-shell.preview-mobile .detail-archive-state {
+  align-items: flex-start;
+  font-size: 12px;
+  padding: 8px 10px;
+  margin-bottom: 10px;
+}
+
+.detail-archive-toggle {
+  min-width: 118px;
+}
+
+.archive-status-badge {
+  min-height: 38px;
+  min-width: 112px;
+  padding: 0 12px;
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-weight: 700;
+  font-size: 14px;
+  border: 1px solid rgba(49, 73, 91, 0.35);
+  background: #ffffff;
+  color: #1f2a35;
+  cursor: default;
+}
+
+.archive-status-badge.archived {
+  background: #dff6ff;
+  border-color: #1e9dcc;
+}
+
+
+.app-shell.preview-mobile .detail-archive-toggle,
+.app-shell.preview-mobile .archive-status-badge {
+  min-width: 34px;
+}
+
+.app-shell.preview-mobile .detail-archive-toggle .archive-label,
+.app-shell.preview-mobile .archive-status-badge .archive-label {
+  display: none;
+}
+
+.app-shell.preview-mobile .detail-archive-state .detail-archive-state-text {
+  line-height: 1.35;
+}
+
+/* Viditelný responzivní blok správy archivace v detailu */
+.archive-management-card {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 12px;
+  margin: -4px 0 14px;
+  padding: 12px;
+  border-radius: 14px;
+  border: 1px solid rgba(41, 71, 94, 0.22);
+  background: #edf4ff;
+  color: #244257;
+}
+
+.archive-management-card.archived {
+  background: #dff6ff;
+  border-color: #1e9dcc;
+  box-shadow: 0 0 0 3px rgba(98, 224, 255, 0.18);
+}
+
+.archive-management-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.archive-management-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  font-size: 22px;
+  box-shadow: 0 4px 10px rgba(41, 71, 94, 0.12);
+}
+
+.archive-management-card.archived .archive-management-icon {
+  animation: archivePulse 320ms ease;
+}
+
+.archive-management-title {
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.archive-management-description {
+  margin-top: 2px;
+  font-size: 13px;
+  color: #536577;
+  line-height: 1.35;
+}
+
+.archive-management-button {
+  min-height: 40px;
+  border: 1px solid #29475e;
+  border-radius: 999px;
+  background: #ffffff;
+  color: #29475e;
+  padding: 0 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  font-weight: 900;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.archive-management-button.is-open {
+  background: #29475e;
+  color: #ffffff;
+}
+
+.archive-management-readonly {
+  min-height: 34px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(41, 71, 94, 0.18);
+  padding: 0 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 900;
+  color: #536577;
+  white-space: nowrap;
+}
+
+@media (max-width: 680px) {
+  .archive-management-card {
+    grid-template-columns: 1fr;
+    align-items: stretch;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .archive-management-button,
+  .archive-management-readonly {
+    width: 100%;
+  }
+}
+
+.app-shell.preview-mobile .archive-management-card {
+  grid-template-columns: 1fr;
+  align-items: stretch;
+  gap: 10px;
+  padding: 10px;
+}
+
+.app-shell.preview-mobile .archive-management-icon {
+  width: 36px;
+  height: 36px;
+  font-size: 19px;
+}
+
+.app-shell.preview-mobile .archive-management-title {
+  font-size: 13px;
+}
+
+.app-shell.preview-mobile .archive-management-description {
+  font-size: 12px;
+}
+
+.app-shell.preview-mobile .archive-management-button,
+.app-shell.preview-mobile .archive-management-readonly {
+  width: 100%;
+}

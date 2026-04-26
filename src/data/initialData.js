@@ -1,0 +1,80 @@
+export const initialLists = [
+  {
+    id: 1,
+    title: "Nákupní seznam 1",
+    ownerId: 1,
+    ownerName: "Franta Novák",
+    memberIds: [1, 2, 3],
+    archived: false,
+    items: [
+      { id: 101, name: "Banány", required: 7, bought: 7 },
+      { id: 102, name: "Čokoláda", required: 2, bought: 1 },
+      { id: 103, name: "Máslo", required: 1, bought: 1 },
+      { id: 104, name: "Mléko", required: 3, bought: 3 },
+      { id: 105, name: "Rohlíky", required: 10, bought: 0 },
+      { id: 106, name: "Sušenky", required: 2, bought: 0 },
+      { id: 107, name: "Rum", required: 2, bought: 1 },
+    ],
+  },
+  {
+    id: 2,
+    title: "Nákupní seznam 2",
+    ownerId: 2,
+    ownerName: "Emanuel Máj",
+    memberIds: [1, 2],
+    archived: false,
+    items: [
+      { id: 201, name: "Pečivo", required: 5, bought: 0 },
+      { id: 202, name: "Sýr", required: 2, bought: 1 },
+    ],
+  },
+  {
+    id: 3,
+    title: "Nákupní seznam 3",
+    ownerId: 3,
+    ownerName: "Aleš Pospíšil",
+    memberIds: [1, 3],
+    archived: false,
+    items: [
+      { id: 301, name: "Káva", required: 1, bought: 1 },
+      { id: 302, name: "Cukr", required: 2, bought: 0 },
+      { id: 303, name: "Mouka", required: 1, bought: 0 },
+      { id: 304, name: "Vejce", required: 10, bought: 5 },
+      { id: 305, name: "Jogurt", required: 3, bought: 1 },
+    ],
+  },
+  {
+    id: 4,
+    title: "Nákupní seznam 4",
+    ownerId: 1,
+    ownerName: "Franta Novák",
+    memberIds: [1, 2],
+    archived: false,
+    items: [
+      { id: 401, name: "Voda", required: 4, bought: 4 },
+      { id: 402, name: "Chléb", required: 2, bought: 0 },
+      { id: 403, name: "Těstoviny", required: 3, bought: 0 },
+      { id: 404, name: "Omáčka", required: 2, bought: 0 },
+      { id: 405, name: "Rýže", required: 1, bought: 0 },
+    ],
+  },
+  {
+    id: 5,
+    title: "Nákupní seznam 5",
+    ownerId: 4,
+    ownerName: "Alena Pobořilová",
+    memberIds: [1, 4],
+    archived: true,
+    items: [
+      { id: 501, name: "Čaj", required: 4, bought: 4 },
+      { id: 502, name: "Med", required: 1, bought: 0 },
+    ],
+  },
+];
+
+export const initialUsers = [
+  { id: 1, name: "Franta Novák" },
+  { id: 2, name: "Emanuel Máj" },
+  { id: 3, name: "Aleš Pospíšil" },
+  { id: 4, name: "Alena Pobořilová" },
+];

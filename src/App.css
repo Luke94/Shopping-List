@@ -1,0 +1,55 @@
+@import "./components/Layout.css";
+@import "./components/HomeRoute.css";
+@import "./components/DetailRoute.css";
+@import "./components/MembersRoute.css";
+@import "./components/DevPanel.css";
+@import "./components/Modals.css";
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #dfe3ea;
+  color: #1a1a1a;
+}
+
+button,
+input,
+select { font: inherit; }
+
+.app.dark { background: #19212a; }
+.app.dark .screen { background: #1f2e3d; }
+.app.dark .content-area { background: #31455a; }
+.app.dark .home-card,
+.app.dark .member-card,
+.app.dark .item-row { color: #111; }
+
+@media (max-width: 920px) {
+  .dev-panel {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .single-input-box input { font-size: 20px; }
+  .search-input-wrapper input { font-size: 20px; min-height: 68px; }
+  .modal-main-action,
+  .confirm-half { font-size: 22px; }
+  .confirm-title { font-size: 24px; }
+  .confirm-message { font-size: 18px; }
+  .search-result-row { font-size: 18px; min-height: 60px; }
+}
+
+@media (max-width: 420px) {
+  .mini-form { grid-template-columns: 1fr; }
+  .compact-modal { width: 94vw; }
+  .compact-modal-body { padding: 24px 14px 16px; }
+  .single-input-box { min-height: 72px; padding: 10px 14px; }
+  .single-input-box input { font-size: 18px; }
+  .floating-label.small-label { font-size: 16px; }
+  .validation-text { font-size: 16px; }
+  .compact-action { min-height: 62px; font-size: 20px; }
+  .confirm-half { min-height: 60px; font-size: 20px; }
+}
